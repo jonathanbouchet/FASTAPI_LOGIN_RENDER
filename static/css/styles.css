@@ -1,0 +1,27 @@
+.hidden{
+    display: hidden;
+}
+
+.show{
+    display: none;
+}
+/* h1 {
+    color: red;
+    text-align: center;
+}
+
+body {
+    background-color: #b3cde0;
+} */
+
+/* img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+} */
+
+/* form-submit-button {
+background: red;
+color: white;
+}

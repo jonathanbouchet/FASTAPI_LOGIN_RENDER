@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>signup</title>
+</head>
+<style>
+    @media (min-width: 1200px) {
+        .container {
+            max-width: 970px;
+        }
+    }
+</style>
+<body>
+    {% include 'front/partials/header2.html' %}
+    <div class="d-flex justify-content-center align-items-center" style="height:100vh;">
+        <div class="container  rounded-3">
+            <div class="row rounded-3">
+                <div class="col-7 bg-info">
+                    <div class="row">
+                        <div class="col-md-6 offset-md-1 py-5">
+                            <h2 class="text-h4 text-white font-weight-medium">Reflexive.ai: VIRTUAL AGENTS TO HELP YOU GROW YOUR BUSINESS
+                            </h2>
+                            <h6 class="text-subtitle-1 text-high-emphasis mt-4 text-white font-weight-regular">
+                                Reflexive.ai: VIRTUAL AGENTS TO HELP YOU GROW YOUR BUSINESS</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-5 shadow-lg p-5">
+                    <div class="row row-cols-1">
+                        <div class="col py-1 my-1">
+                            <h2>Sign up</h2>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex">
+                                <p > you have an account? </p>
+                                <a class="mx-2 text-decoration-none"  href="/signin"> sign in</a>
+                            </div>
+                        </div>
+
+                        <div class="col py-2 my-1">
+
+                            <div class="row row-cols-1">
+                                <form method="post">
+                            
+                                <div class="col my-1">
+                                    <input  class="form-control py-2" name="username" placeholder="E-mail / Username" type="text" value="{{ username }}" >
+                                </div>
+
+                                <div class="col my-2">
+                                    <input class="form-control py-2" name="password" placeholder="password" type="password" value="{{ password }}">
+                                </div>
+                                <div class="col my-2">
+                                    <div class="d-grid">
+                                     <button class="btn btn-primary" type="submit">Sign up</button> 
+
+                                    </div>
+                                </div>
+                                <div class="col my-2">
+                                    <div class="d-grid">
+                                        {% if error %}
+                                       <span class="text-danger">{{ error }}</span> 
+                                        {% endif %}
+                                    </div>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
